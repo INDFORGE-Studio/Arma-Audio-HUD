@@ -1,0 +1,9 @@
+﻿# ============================================================
+# base_headphone_fix.txt - correction materielle de TON casque (optionnelle)
+# Inclus par les profils casque 01-04 et 08. Par defaut : AUCUNE correction (son neutre).
+# Pour un casque connu, remplace le contenu de ce fichier par une courbe AutoEq
+# (https://github.com/jaakkopasanen/AutoEq, format "Equalizer APO ParametricEQ")
+# ou copie un des fichiers du dossier corrections\ (ex. hyperx_cloud_ii.txt).
+# Puis lance : python claude_tools\eqctl.py fixpreamp   (recalcule les Preamp, evite la saturation)
+# ============================================================
+Preamp: 0.0 dB

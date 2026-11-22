@@ -1,0 +1,14 @@
+# ============================================================
+# 05_speakers_clean.txt - /enceintes - petites enceintes de bureau
+# Applique uniquement au peripherique Haut-parleurs (Realtek) via le routeur.
+# ============================================================
+Preamp: -2.0 dB
+
+# Protection mecanique : passe-haut 110 Hz, 24 dB/oct (les petits HP saturent en dessous)
+Filter: ON HPQ Fc 110 Hz Q 0.54
+Filter: ON HPQ Fc 110 Hz Q 1.31
+
+# Clarte vocale (YouTube, Discord, jeu detente)
+Filter: ON PK Fc 1800 Hz Gain 2.0 dB Q 1.40
+# Aigus agressifs
+Filter: ON PK Fc 6500 Hz Gain -2.5 dB Q 1.50

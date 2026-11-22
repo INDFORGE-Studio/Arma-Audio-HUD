@@ -1,0 +1,16 @@
+# ============================================================
+# 09_speakers_music.txt - /spkmusique - petites enceintes de bureau, ecoute musicale
+# Passe-haut plus bas que /enceintes (65 Hz au lieu de 110 Hz) pour garder le
+# corps du son. Si les HP saturent a fort volume : baisser le volume ou /enceintes.
+# ============================================================
+Preamp: -1.5 dB
+
+# Protection mecanique : passe-haut 65 Hz, 24 dB/oct
+Filter: ON HPQ Fc 65 Hz Q 0.54
+Filter: ON HPQ Fc 65 Hz Q 1.31
+# Corps du grave, juste au-dessus de la limite des petits HP
+Filter: ON PK Fc 120 Hz Gain 1.5 dB Q 1.00
+# Aigus agressifs, plus doux qu'en /enceintes
+Filter: ON PK Fc 6500 Hz Gain -1.5 dB Q 1.50
+# Air (compensation volume modere)
+Filter: ON HSC Fc 10000 Hz Gain 1.0 dB Q 0.71

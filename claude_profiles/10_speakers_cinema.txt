@@ -1,0 +1,15 @@
+# ============================================================
+# 10_speakers_cinema.txt - /spkcinema - petites enceintes de bureau, films et series
+# Plus de grave que /enceintes (coupure a 75 Hz), dialogues mis en avant.
+# ============================================================
+Preamp: -1.9 dB
+
+# Protection mecanique : passe-haut 75 Hz, 24 dB/oct
+Filter: ON HPQ Fc 75 Hz Q 0.54
+Filter: ON HPQ Fc 75 Hz Q 1.31
+# Impact des explosions, au-dessus de la limite des HP
+Filter: ON PK Fc 110 Hz Gain 2.0 dB Q 1.00
+# Dialogues
+Filter: ON PK Fc 2000 Hz Gain 1.5 dB Q 1.20
+# Aigus agressifs
+Filter: ON PK Fc 6500 Hz Gain -2.0 dB Q 1.50

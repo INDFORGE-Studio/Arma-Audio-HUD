@@ -1,0 +1,7 @@
+# ============================================================
+# claude_profiles\neutral.txt
+# Profil NEUTRE (bypass) - aucun filtre, aucune correction.
+# Utilise en attendant le calibrage, et pour les enceintes hors jeu.
+# Gain positif max : 0.0 dB  ->  Preamp : 0.0 dB
+# ============================================================
+Preamp: 0.0 dB

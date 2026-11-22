@@ -1,0 +1,37 @@
+# ============================================================
+# 02_clutch_surgeon.txt - /clutch - ARMA REFORGER : 1vX / hyper-concentration
+# Tout le spectre est en retrait sauf 1.5-5 kHz (pas, voix, goupille, rechargement, ADS).
+# @footsteps 2400 4300
+# ============================================================
+Preamp: -5.3 dB
+Include: base_headphone_fix.txt
+
+# Anti-masquage vehicules : passe-haut 85 Hz (12 dB/oct)
+Filter: ON HPQ Fc 85 Hz Q 0.71
+# Retrait global hors bande utile
+Filter: ON LSC Fc 220 Hz Gain -2.0 dB Q 0.70
+Filter: ON HSC Fc 9000 Hz Gain -3.0 dB Q 0.70
+
+# Reverb foret/batiments + resonance du casque
+Filter: ON PK Fc 320 Hz Gain -2.5 dB Q 1.80
+
+# Bande 1.5-5 kHz + radar infanterie
+# liant large 1.5-5 kHz
+Filter: ON PK Fc 3000 Hz Gain 1.0 dB Q 0.70
+# bottes
+Filter: ON PK Fc 2400 Hz Gain 3.5 dB Q 2.20
+# buissons, goupille, rechargement, ADS
+Filter: ON PK Fc 4300 Hz Gain 4.5 dB Q 2.50
+
+# Protection tirs
+Filter: ON PK Fc 7500 Hz Gain -3.0 dB Q 2.00
+
+# --- Crossfeed leger : -15 dB (x0.178), passe-bas 700 Hz, retard 0.3 ms ---
+# Adoucit la separation stereo dure sans perdre la directionnalite.
+# @crossfeed -15 700
+Copy: XL=R XR=L
+Channel: XL XR
+Filter: ON LPQ Fc 700 Hz Q 0.71
+Delay: 0.3 ms
+Copy: L=L+0.178*XL R=R+0.178*XR
+Channel: all

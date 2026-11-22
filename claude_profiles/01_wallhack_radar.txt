@@ -1,0 +1,28 @@
+# ============================================================
+# 01_wallhack_radar.txt - /pas - ARMA REFORGER : radar infanterie extreme
+# Chaine : correction casque (cible Harman) + courbe FPS ci-dessous.
+# @footsteps 2400 4300
+# ============================================================
+Preamp: -4.5 dB
+Include: base_headphone_fix.txt
+
+# Anti-masquage vehicules / artillerie : passe-haut 85 Hz, 24 dB/oct (Butterworth 4e ordre)
+Filter: ON HPQ Fc 85 Hz Q 0.54
+Filter: ON HPQ Fc 85 Hz Q 1.31
+
+# Reverb foret/batiments + resonance du casque
+Filter: ON PK Fc 320 Hz Gain -2.5 dB Q 1.80
+# Effet "boite" des interieurs (400-600 Hz)
+Filter: ON PK Fc 500 Hz Gain -1.5 dB Q 1.40
+
+# Radar infanterie
+# bottes sur terre / route
+Filter: ON PK Fc 2400 Hz Gain 3.5 dB Q 2.20
+# buissons, herbe, gravier, degoupillage, rechargement
+Filter: ON PK Fc 4300 Hz Gain 4.5 dB Q 2.50
+
+# Protection tirs & detonations proches
+# claquement metallique M16 / AK-74
+Filter: ON PK Fc 7500 Hz Gain -3.0 dB Q 2.00
+# aigus > 8 kHz
+Filter: ON HSC Fc 9000 Hz Gain -1.5 dB Q 0.70

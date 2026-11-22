@@ -1,0 +1,5 @@
+__pycache__/
+hud_settings.json
+sounds/
+*.bak*
+

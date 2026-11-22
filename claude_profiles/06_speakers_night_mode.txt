@@ -1,0 +1,15 @@
+# ============================================================
+# 06_speakers_night_mode.txt - /nuit - petites enceintes de bureau a tres faible volume
+# Coupe les basses qui traversent les murs, pousse l'intelligibilite des voix.
+# ============================================================
+Preamp: -2.9 dB
+
+# Basses qui traversent les murs + protection HP : 24 dB/oct a 110 Hz
+Filter: ON HPQ Fc 110 Hz Q 0.54
+Filter: ON HPQ Fc 110 Hz Q 1.31
+# Boum / brouillard bas-medium
+Filter: ON PK Fc 250 Hz Gain -2.0 dB Q 1.00
+# Voix 1-3 kHz
+Filter: ON PK Fc 1800 Hz Gain 3.0 dB Q 0.90
+# Aigus agressifs
+Filter: ON PK Fc 6500 Hz Gain -2.0 dB Q 1.50

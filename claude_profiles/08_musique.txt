@@ -1,0 +1,13 @@
+# ============================================================
+# 08_musique.txt - /musique - Ecoute musicale fidele (mode MUSIQUE du PC Command HUD)
+# Correction casque (cible Harman = reference d'ecoute) + legere chaleur
+# dans le grave. Aucun boost "gaming" sur les pas ou les tirs.
+# @footsteps 2400 4300
+# ============================================================
+Preamp: -1.4 dB
+Include: base_headphone_fix.txt
+
+# Protection subsonique
+Filter: ON HPQ Fc 18 Hz Q 0.71
+# Chaleur du grave (kick, basse)
+Filter: ON LSC Fc 105 Hz Gain 1.5 dB Q 0.71

@@ -1,0 +1,16 @@
+# ============================================================
+# 04_cinematic_solo.txt - /solo - Immersion : solo, Game Master, musique, films
+# Sub-basses restaurees, rendu naturel et dynamique.
+# @footsteps 2400 4300
+# ============================================================
+Preamp: -2.9 dB
+Include: base_headphone_fix.txt
+
+# Protection subsonique
+Filter: ON HPQ Fc 18 Hz Q 0.71
+# Sub-basses chaleureuses (30-60 Hz)
+Filter: ON LSC Fc 60 Hz Gain 3.5 dB Q 0.71
+# Resonance du casque (plus leger qu'en competitif)
+Filter: ON PK Fc 320 Hz Gain -1.5 dB Q 1.80
+# Adoucit le claquement des rafales sans eteindre les aigus
+Filter: ON PK Fc 7500 Hz Gain -1.5 dB Q 2.00

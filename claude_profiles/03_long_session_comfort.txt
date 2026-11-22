@@ -1,0 +1,24 @@
+# ============================================================
+# 03_long_session_comfort.txt - /chill - ARMA REFORGER : sessions 4h+ / protection auditive
+# Tilt doux (~ -1 dB/octave) + attenuation des zones de fatigue, presence 2 kHz conservee.
+# @footsteps 2400 4300
+# ============================================================
+Preamp: -3.4 dB
+Include: base_headphone_fix.txt
+
+# Infra-basses inutiles
+Filter: ON HPQ Fc 30 Hz Q 0.71
+
+# Tilt -1 dB/oct, pivot 1 kHz (ajuste numeriquement, ecart 0.11 dB RMS sur 60 Hz-16 kHz)
+Filter: ON LSC Fc 250 Hz Gain 4.0 dB Q 0.40
+Filter: ON HSC Fc 4000 Hz Gain -4.0 dB Q 0.40
+
+# Reverb / resonance du casque
+Filter: ON PK Fc 320 Hz Gain -2.5 dB Q 1.80
+
+# Presence competitive conservee
+Filter: ON PK Fc 2000 Hz Gain 1.5 dB Q 1.50
+
+# Frequences de fatigue
+Filter: ON PK Fc 3000 Hz Gain -3.0 dB Q 2.00
+Filter: ON PK Fc 6500 Hz Gain -3.0 dB Q 2.00
